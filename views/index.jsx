@@ -1,30 +1,20 @@
 const React = require('react')
-
-function Default(html) {
-  return (
-    <html>
-    <head>
-      <title>Default</title>
-    </head>
-    <body>
-      <h1>HTML Rendered!</h1>
-      <div className="container">
-        {html.children}
-      </div>
-    </body>
-    </html>
-  )
-}
-
-module.exports = Default
-
-const React = require('react')
 const Default = require('./layouts/Default')
 
-function Index () {
+function Index ({breads}) {
     return (
       <Default>
         <h2>Index Page</h2>
+        {/* This is a JSX comment.*/}
+        {/* <p>I have {breads[0].name} bread!</p> */}
+          <ul>
+            {
+              breads.map((bread, index)=> {
+                return (<li></li>)
+              })      
+            }
+          </ul>
+        <p>I have {breads[0].name} bread!</p>
       </Default>
     )
 }
