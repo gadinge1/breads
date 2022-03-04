@@ -8,7 +8,7 @@ function Show ({bread, index}) {
       <Default>
         <h2>Show Page</h2>
         <h3>{bread.name}</h3>
-        <form action={`/breads/${index}?_method=DELETE`} method="POST">
+        <form action={`/breads/${index}/?_method=DELETE`} method="POST">
             <input type='submit' value="DELETE"/>
         </form>
         <p>
